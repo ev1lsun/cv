@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500&subset=cyrillic');
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+header {
+    height: 480px;
+    background-color: #333a42;
+}
+
+.header-block{
+    display: flex;
+    height: 480px;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%; /* макс ширина */
+    margin: 0 auto; /* выровняем по центру */
+}
+
+.flex {
+    flex:1 2 calc(40% - 30px);
+    box-sizing:border-box;
+}
+
+.header-name {
+    flex-basis: 31%;
+    font-size: 1em;
+    margin-left: 43px;
+    margin-top: 20px;
+    height: 60px;
+}
+
+.header-name h1 {
+
+    color: #ffffff;
+    font-size: 1.7em;
+}
+
+.nav {
+    flex-basis: 60%;
+    flex-grow: 5;
+    height: 40px;
+    margin-top: 46px;
+    text-align: left;
+}
+
+.nav a {
+    padding-right: 39px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.header-photo {
+   flex-grow: 1;
+    height: 250px;
+    margin-top: 90px;
+    flex-basis: 33%;
+}
+
+.photo-background {
+    height: 209px;
+    width: 209px;
+    background-color: #d7443e;
+    border-radius: 50%;
+    max-width: 250px;
+}
+
+.header-skills {
+    flex-grow: 45;
+    flex-basis: 29%;
+    margin-top: 91px;
+    margin-left: 10px;
+}
+
+.header-skills p {
+     color: #ffffff;
+    width: 620px;
+    height: 192px;
+    text-align: left;
+    font-size: 1.5em;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+.projects {
+    height: 450px;
+    background-color: #f1ece9;
+}
+
+
+.projects-heading  {
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 43px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 200px;
+}
+
+.my-projects {
+    position: relative;
+    top: -10px;
+    width: 620px;
+    height: 288px;
+    background-color: #4a90e2;
+    float: right;
+    margin-right: 42px;
+}
+
+.projects-view  {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    position: absolute;
+    bottom: 58px;
+    right: 314px;
+    margin-top: 5px;
+
+}
