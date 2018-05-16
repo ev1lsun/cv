@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <title>CV</title>
     <meta charset="UTF-8">
@@ -33,18 +33,76 @@
 
 <main>
   <section class="projects">
+      <div class="projects-block">
           <h2 class="projects-heading">Проекты</h2>
       </div>
       <div class="my-projects"></div>
       <div class="projects-view">
-      <h3>Сайт «Светлый день»</h3>
-          <span>2017 · Программирование · Верстка </span>
+          <h3>Сайт «Светлый день»<span class="number">1/10</span></h3>
+          <span>2017 · Программирование · Верстка</span>
       </div>
   </section>
 
+    <section class="reviews">
+        <div class="border"></div>
+        <h2 class="reviews-heading">Отзывы</h2>
+        <div class="container">
+            <div class="reviews-flex">
+                <div class="reviews-block">
+                    <div class="reviews-photo"></div>
+                    <h3>Максим, Санкт-Петербург</h3>
+                    <p>«Вообще по красоте сделал, буду еще заказывать и друганам посоветую. Павел мастер на все руки,
+                        сайт
+                        состряпал за 3 дня»</p>
+                </div>
+            </div>
+            <div class="reviews-flex2">
+                <div class="reviews-block">
+                    <div class="reviews-photo"></div>
+                    <h3>Глебан, Душанбе</h3>
+                    <p>«Вообще по красоте сделал, буду еще заказывать и друганам посоветую. Павел мастер на все руки,
+                        сайт
+                        состряпал за 3 дня»</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="border"></div>
+        <div class="feedback-container">
+            <div class="contacts">
+                <h2>Контакты</h2>
+                <p>Я сейчас нахожуся в в Тайланде.<br>
+                    У меня сейчас 22:04. Здесь все кто по кайфу, ингуши,кабардинцы <br><br>
+                    Быстрее всего отвечу <span class="mail">по почте</span>.</p>
+                <div class="color">
+                    <div class="color-1"></div>
+                    <div class="color-2"></div>
+                    <div class="color-3"></div>
+                </div>
+            </div>
+            <div class="contacts-form">
+                <h2>Обратная связь</h2>
+                <label for="name" class="name">Имя</label>
+                <label for="email" class="email">Почта</label>
+
+                <form method="post" class="feedback-form">
+                    <input type="text" id="name">
+                    <input type="email" id="email">
+                    <label for="message" class="message">Сообщение</label>
+                    <textarea name="message" id="message"></textarea>
+                    <button class="btn">Отправить</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
 </main>
 
+<footer>
 
+</footer>
 
 </body>
 </html>

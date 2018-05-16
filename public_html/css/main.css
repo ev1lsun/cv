@@ -35,9 +35,9 @@ header {
 }
 
 .header-name h1 {
-
     color: #ffffff;
     font-size: 1.7em;
+    font-weight: 500;
 }
 
 .nav {
@@ -50,7 +50,7 @@ header {
 
 .nav a {
     padding-right: 39px;
-    font-family: 'IBM Plex Sans', sans-serif;
+
     font-size: 1.1em;
     text-decoration: none;
     color: #ffffff;
@@ -90,37 +90,241 @@ header {
 }
 
 .projects {
-    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    height: 460px;
     background-color: #f1ece9;
+
 }
 
-
+.reviews-heading,
 .projects-heading  {
     box-sizing: border-box;
     padding-top: 40px;
     padding-left: 43px;
     margin-top: 0;
     margin-bottom: 0;
-    width: 200px;
+    font-size: 1.7em;
+    font-weight: 500;
 }
 
 .my-projects {
-    position: relative;
-    top: -10px;
     width: 620px;
     height: 288px;
     background-color: #4a90e2;
-    float: right;
     margin-right: 42px;
+    align-self: flex-end;
+    margin-top: 49px;
 }
 
 .projects-view  {
+    width: 620px;
+    height: 100px;
+    align-self: flex-end;
+    margin-right: 42px;
+}
+
+.projects-block {
+    width: 380px;
+    height: 280px;
+}
+
+.projects-view h3 {
+    width: 620px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.number {
+    display: inline-block;
+    text-align: right;
+    padding-left: 331px;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.reviews {
+
+    height: 460px;
+    background-color: #f1ece9;
+}
+
+.border {
+    border-top: 1px solid #a6a5a1;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 380px;
+    align-items: center;
+}
+
+.reviews-photo {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    background-color: #333a42;
+    margin-right: 15px;
+}
+
+.reviews-block {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    position: absolute;
-    bottom: 58px;
-    right: 314px;
-    margin-top: 5px;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 460px;
+}
 
+.reviews-block p {
+    width: 300px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.reviews-block h3 {
+    height: 32px;
+    width: 240px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.feedback {
+    height: 510px;
+    background-color: #f1ece9;
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 450px;
+    align-items: center;
+}
+
+.contacts-form,
+.contacts {
+    width: 460px;
+    height: 310px;
+}
+
+.mail {
+    font-weight: 500;
+    color: #d7443e;
+}
+
+.contacts h2 {
+    padding-bottom: 32px;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.contacts p {
+    font-weight: 500;
+    font-size: 1.6em;
+    text-align: left;
+    line-height: 1.25;
+}
+
+.color {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    width: 200px;
+    margin-top: 64px;
+
+}
+
+.color-1,
+.color-2,
+.color-3 {
+    width: 32px;
+    height: 32px;
+}
+
+.color-1 {
+    background-color: #4b76a5;
+}
+
+.color-2 {
+    background-color: #415e97;
+}
+
+.color-3 {
+    background-color: #cb358e;
+}
+
+.contacts-form h2 {
+    padding-bottom: 22px;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.name {
+    position: relative;
+    top: -10px;
+}
+
+.email {
+    position: relative;
+    top: -10px;
+    padding-left: 207px;
+    padding-bottom: 10px;
+}
+
+.message {
+    padding-right: 375px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+
+input {
+    width: 218px;
+    height: 29px;
+    border: 1px solid #333a42;
+    background-color: #f1ece9;
+}
+
+textarea {
+    background-color: #f1ece9;
+    border: 1px solid #333a42;
+    resize: none;
+    width: 460px;
+    height: 144px;
+}
+
+.btn {
+    width: 140px;
+    height: 32px;
+    margin-top: 34px;
+    border: 1px solid #333a42;
+    background-color: #333a42;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+footer {
+    height: 52px;
+    background-color: #333a42;
 }
