@@ -11,57 +11,85 @@ header {
     background-color: #333a42;
 }
 
-.header-block{
-    display: flex;
-    height: 480px;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%; /* макс ширина */
-    margin: 0 auto; /* выровняем по центру */
-}
+.gradient-text {
 
-.flex {
-    flex:1 2 calc(40% - 30px);
-    box-sizing:border-box;
+    background: linear-gradient(45deg, lightblue 33%,lightcyan 55%, deepskyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    text-transform: uppercase;
+
 }
 
 .header-name {
-    flex-basis: 31%;
-    font-size: 1em;
-    margin-left: 43px;
-    margin-top: 20px;
-    height: 60px;
-}
-
-.header-name h1 {
+    display: inline-block;
+    position: relative;
+    left: 41px;
+    top: 22px;
+    width: 300px;
     color: #ffffff;
     font-size: 1.7em;
     font-weight: 500;
+    margin: 0;
+}
+
+.header-block {
+    display: flex;
+    height: 370px;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    padding-top: 20px;
+    margin: 0 auto;
 }
 
 .nav {
-    flex-basis: 60%;
-    flex-grow: 5;
-    height: 40px;
-    margin-top: 46px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 500px;
+    height: 30px;
+    margin-left: 33%;
     text-align: left;
 }
 
 .nav a {
-    padding-right: 39px;
-
+    width: 150px;
+    text-align: center;
     font-size: 1.1em;
     text-decoration: none;
     color: #ffffff;
     font-weight: 400;
 }
 
+.nav-link:nth-child(2n+1):hover {
+    border-bottom: 2px solid lightcoral;
+    color: lightcoral;
+    transition: 0.1s;
+}
+
+.nav-link:nth-child(2n):hover {
+    border-bottom: 2px solid lightblue;
+    color: lightblue;
+    transition: 0.1s;
+}
+
+header .nav .nav-link:nth-child(2n+1):active {
+    border-bottom: 2px solid indianred;
+    color: indianred;
+    transition: 0.1s;
+}
+
+header .nav .nav-link:nth-child(2n):active {
+    border-bottom: 2px solid deepskyblue;
+    color: deepskyblue;
+    transition: 0.2s;
+}
+
 .header-photo {
-   flex-grow: 1;
     height: 250px;
     margin-top: 90px;
-    flex-basis: 33%;
 }
 
 .photo-background {
@@ -73,14 +101,13 @@ header {
 }
 
 .header-skills {
-    flex-grow: 45;
-    flex-basis: 29%;
     margin-top: 91px;
     margin-left: 10px;
+    flex-shrink: 10;
 }
 
 .header-skills p {
-     color: #ffffff;
+    color: #ffffff;
     width: 620px;
     height: 192px;
     text-align: left;
@@ -90,20 +117,15 @@ header {
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    flex-wrap: wrap;
-    height: 460px;
+    height: 480px;
     background-color: #f1ece9;
-
 }
 
 .reviews-heading,
-.projects-heading  {
+.projects-heading {
     box-sizing: border-box;
     padding-top: 40px;
-    padding-left: 43px;
+    padding-left: 30px;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.7em;
@@ -111,37 +133,45 @@ header {
 }
 
 .my-projects {
-    width: 620px;
-    height: 288px;
+    width: 60%;
+    height: 100%;
     background-color: #4a90e2;
     margin-right: 42px;
-    align-self: flex-end;
-    margin-top: 49px;
+    align-self: center;
+    flex-shrink: 6;
+    margin-top: 5px;
 }
 
-.projects-view  {
-    width: 620px;
+.projects-view {
+    width: 60.5%;
     height: 100px;
-    align-self: flex-end;
+    align-self: center;
     margin-right: 42px;
+    flex-shrink: 8;
+    margin-bottom: 35px;
 }
 
 .projects-block {
-    width: 380px;
-    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    max-width: 1024px;
+    height: 400px;
+    margin: 0 auto;
 }
 
 .projects-view h3 {
-    width: 620px;
+    display: inline-flex;
+    width: 100%;
     font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: 500;
+    margin-top: 15px;
 }
 
 .number {
-    display: inline-block;
+    padding-left: 48%;
     text-align: right;
-    padding-left: 331px;
     font-weight: 400;
     font-size: 0.8em;
 }
@@ -221,9 +251,20 @@ header {
     height: 310px;
 }
 
-.mail {
+.mail a {
+    text-decoration: none;
     font-weight: 500;
     color: #d7443e;
+}
+
+.mail a:hover {
+    text-decoration: underline;
+    color: lightcoral;
+    transition: 0.2s;
+}
+
+.mail a:active {
+    color: darkred;
 }
 
 .contacts h2 {
@@ -246,7 +287,6 @@ header {
     height: 35px;
     width: 200px;
     margin-top: 64px;
-
 }
 
 .color-1,
@@ -258,14 +298,20 @@ header {
 
 .color-1 {
     background-color: #4b76a5;
+    border: 0;
+    cursor: pointer;
 }
 
 .color-2 {
     background-color: #415e97;
+    border: 0;
+    cursor: pointer;
 }
 
 .color-3 {
     background-color: #cb358e;
+    border: 0;
+    cursor: pointer;
 }
 
 .contacts-form h2 {
@@ -324,7 +370,19 @@ textarea {
     font-size: 1.1em;
 }
 
+.btn:hover {
+    color: lightblue;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:active {
+    color: darkcyan;
+    outline: none;
+}
+
 footer {
     height: 52px;
     background-color: #333a42;
 }
+

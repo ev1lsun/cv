@@ -10,40 +10,42 @@
 <body>
 
 <header>
-    <section class="header-block">
-        <div class="flex header-name">
-            <h1>Денис Березнев</h1>
+    <section>
+        <h1 class="header-name gradient-text">Денис Березнев</h1>
+        <div class="nav scroll">
+            <a class="nav-link" href="#about-me">Обо мне</a>
+            <a class="nav-link" href="#projects">Проекты</a>
+            <a class="nav-link" href="#reviews">Отзывы</a>
+            <a class="nav-link" href="#btn">Контакты</a>
         </div>
-        <div class="flex nav">
-            <a href="#">Обо мне</a>
-            <a href="#">Проекты</a>
-            <a href="#">Отзывы</a>
-            <a href="#">Контакты</a>
+        <div class="header-block">
+            <div class="header-photo">
+                <figure class="photo-background"></figure>
+            </div>
+            <div class="header-skills">
+                <p id="about-me">Доброго времени суток, меня зовут Денис. Занимаюсь разработкой сайтов с нуля, под ключ.
+                    Специалист по
+                    CMS WordPress, OpenCart, Elgg. Выполняю верстку и программирование сайтов. Делаю верстку на
+                    Bootstrap,
+                    таким образом Ваш сайт будет отлично выглядеть на всех устройствах. </p>
+            </div>
         </div>
-        <div class="flex header-photo">
-            <figure class="photo-background"></figure>
-        </div>
-        <div class="flex header-skills">
-            <p>Доброго времени суток, меня зовут Денис. Занимаюсь разработкой сайтов с нуля, под ключ. Специалист по
-                CMS WordPress, OpenCart, Elgg. Выполняю верстку и программирование сайтов. Делаю верстку на Bootstrap,
-                таким образом Ваш сайт будет отлично выглядеть на всех устройствах. </p>
-        </div>
-        </section>
+    </section>
 </header>
 
 <main>
   <section class="projects">
-      <div class="projects-block">
-          <h2 class="projects-heading">Проекты</h2>
-      </div>
+      <h2 class="projects-heading">Проекты</h2>
+      <div id="projects" class="projects-block">
       <div class="my-projects"></div>
       <div class="projects-view">
           <h3>Сайт «Светлый день»<span class="number">1/10</span></h3>
           <span>2017 · Программирование · Верстка</span>
       </div>
+      </div>
   </section>
 
-    <section class="reviews">
+    <section id="reviews" class="reviews">
         <div class="border"></div>
         <h2 class="reviews-heading">Отзывы</h2>
         <div class="container">
@@ -75,34 +77,67 @@
                 <h2>Контакты</h2>
                 <p>Я сейчас нахожуся в в Тайланде.<br>
                     У меня сейчас 22:04. Здесь все кто по кайфу, ингуши,кабардинцы <br><br>
-                    Быстрее всего отвечу <span class="mail">по почте</span>.</p>
-                <div class="color">
-                    <div class="color-1"></div>
-                    <div class="color-2"></div>
-                    <div class="color-3"></div>
+                    Быстрее всего отвечу <span class="mail"><a href="#">по почте</a></span>.</p>
+                <div class="color" onsubmit="return false">
+                    <button value="#4b76a5" onclick="change_color(this)" class="color-1"></button>
+                    <button value="#415e97" onclick="change_color(this)" class="color-2"></button>
+                    <button value=" #cb358e" onclick="change_color(this)" class="color-3"></button>
                 </div>
             </div>
             <div class="contacts-form">
                 <h2>Обратная связь</h2>
                 <label for="name" class="name">Имя</label>
                 <label for="email" class="email">Почта</label>
-
-                <form method="post" class="feedback-form">
-                    <input type="text" id="name">
-                    <input type="email" id="email">
+                <form onsubmit="return validate();" method="post" class="feedback-form">
+                    <input type="text" class="err_fio" id="name">
+                    <input type="email" class="err_mail" id="email">
                     <label for="message" class="message">Сообщение</label>
                     <textarea name="message" id="message"></textarea>
-                    <button class="btn">Отправить</button>
+                    <input type="submit" id="btn" class="btn">
                 </form>
-
             </div>
         </div>
     </section>
 </main>
 
 <footer>
-
 </footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    //scroll
+    $(".scroll").on('click', 'a', function (e) {
+        let fixed_offset = 100;
+        $('html,body').stop().animate({scrollTop: $(this.hash).offset().top - fixed_offset}, 1000);
+        e.preventDefault();
+    });
 
+    //form validation
+    function validate() {
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        let message = document.getElementById('message');
+
+        if (!name.value) {
+            name.style.border = "1px solid red";
+            return false;
+        }
+
+        if (!email.value) {
+            email.style.border = "1px solid red";
+            return false;
+        }
+
+        if (!message.value) {
+            message.style.border = "1px solid red";
+            return false;
+        }
+        return true;
+    }
+
+    //change color
+    //function change_color(obj) {
+      //  obj.value && (document.header.style.backgroundColor = obj.value);
+    //}
+</script>
 </body>
 </html>
